@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection — Primrose Coffee</title>
+    <meta name="description"
+        content="Browse our curated collection of premium Ethiopian single-origin coffees. Highland Washed, Mountain Natural, and Forest Honey varieties.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Header -->
+    <header class="page-header" id="top">
+        <a href="index.html" class="page-header__menu" aria-label="Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="3" y1="7" x2="21" y2="7" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="17" x2="21" y2="17" />
+            </svg>
+        </a>
+        <span class="page-header__brand">PRIMROSE</span>
+        <div style="width:36px"></div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="index.html">HOME</a>
+        <span> › </span>
+        <span>COLLECTION</span>
+    </nav>
+
+    <!-- Product Grid -->
+    <main class="product-grid" id="products-grid">
+        <!-- Products injected by JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            BACK TO TOP
+        </button>
+
+        <div class="footer-social-text">
+            <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+            <span class="dot"></span>
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <span class="dot"></span>
+            <a href="mailto:primrosecoffee@gmail.com">Gmail</a>
+        </div>
+
+        <div class="footer-copyright">
+            &copy; 2024 PRIMROSE EXPORT<br>
+            PREMIUM ETHIOPIAN COFFEE SPECIALISTS
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>renderCollection();</script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Product Detail — Primrose Coffee</title>
+    <meta name="description"
+        content="Detailed profile of premium Ethiopian specialty coffee. View origin, variety, processing, and tasting notes.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Header -->
+    <header class="detail-header" id="top">
+        <a href="collection.html" class="detail-header__back" aria-label="Back to collection">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12" />
+                <polyline points="12 19 5 12 12 5" />
+            </svg>
+        </a>
+        <span class="detail-header__title" id="header-title"></span>
+        <button class="detail-header__share" aria-label="Share" onclick="shareProduct()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3" />
+                <circle cx="6" cy="12" r="3" />
+                <circle cx="18" cy="19" r="3" />
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Product Content -->
+    <main id="product-content">
+        <!-- Injected by JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-social" id="footer-social">
+            <!-- Social icons injected by JS -->
+        </div>
+
+        <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="12" y1="19" x2="12" y2="5" />
+                <polyline points="5 12 12 5 19 12" />
+            </svg>
+            BACK TO TOP
+        </button>
+
+        <div class="footer-copyright">
+            SPECIALTY TRADE CO. &copy; 2024
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>renderProductDetail();</script>
+</body>
+
+</html>

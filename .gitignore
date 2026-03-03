@@ -1,0 +1,7 @@
+# Stitch source files
+stitch_product_catalog.zip
+stitch_output/
+
+# OS files
+Thumbs.db
+.DS_Store
