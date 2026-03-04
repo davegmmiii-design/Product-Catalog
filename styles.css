@@ -138,12 +138,10 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(30, 60, 45, 0.4) 0%,
-    rgba(30, 60, 45, 0.55) 40%,
-    rgba(30, 60, 45, 0.7) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(30, 60, 45, 0.4) 0%,
+      rgba(30, 60, 45, 0.55) 40%,
+      rgba(30, 60, 45, 0.7) 100%);
 }
 
 .hero__content {
@@ -154,93 +152,81 @@ button {
   animation: fadeInUp 1s ease-out;
 }
 
-.hero__logo {
-  width: 80px;
-  height: 80px;
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-base);
+.hero__logo-wrapper {
+  margin-bottom: 2rem;
+  animation: fadeIn 1.2s ease-out;
 }
 
-.hero__logo:hover {
-  transform: scale(1.05);
+.hero__logo-png {
+  max-width: 280px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
 }
 
-.hero__logo svg {
-  width: 44px;
-  height: 44px;
-  fill: var(--color-primary-dark);
+/* Language Selector */
+.lang-selector-container {
+  position: relative;
 }
 
-.hero__brand {
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-}
-
-.hero__title {
-  font-size: clamp(2rem, 6vw, 3.2rem);
-  margin-bottom: 1rem;
-}
-
-.hero__subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 2.5rem;
-  max-width: 380px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: var(--color-accent);
-  color: var(--color-primary-dark);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 1rem 2.5rem;
-  border-radius: 60px;
-  box-shadow: 0 4px 20px rgba(232, 168, 73, 0.4);
-  transition: all var(--transition-base);
-}
-
-.hero__cta:hover {
-  background: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(232, 168, 73, 0.5);
-}
-
-.hero__cta svg {
-  width: 20px;
-  height: 20px;
-  transition: transform var(--transition-fast);
-}
-
-.hero__cta:hover svg {
-  transform: translateX(4px);
-}
-
-/* Vertical Side Text */
-.hero__side-text {
+.lang-menu {
   position: absolute;
-  left: 1rem;
-  bottom: 6rem;
-  z-index: 2;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-size: 0.7rem;
+  top: calc(100% + 8px);
+  left: 0;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem;
+  min-width: 120px;
+  z-index: 1000;
+  border: 1px solid var(--color-border);
+}
+
+.lang-menu.active {
+  display: flex;
+}
+
+.lang-menu button {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-primary-dark);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.lang-menu button:hover {
+  background: var(--color-bg);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .hero__side-text {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .hero__cta svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .hero__cta:hover svg {
+  transform: scaleX(-1) translateX(-4px);
+}
+
+[dir="rtl"] .lang-menu {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+[dir="rtl"] .lang-menu button {
+  text-align: right;
 }
 
 /* Top Bar */
@@ -947,6 +933,7 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -954,8 +941,13 @@ button {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .animate-in {
@@ -963,12 +955,29 @@ button {
   opacity: 0;
 }
 
-.animate-in:nth-child(1) { animation-delay: 0.05s; }
-.animate-in:nth-child(2) { animation-delay: 0.1s; }
-.animate-in:nth-child(3) { animation-delay: 0.15s; }
-.animate-in:nth-child(4) { animation-delay: 0.2s; }
-.animate-in:nth-child(5) { animation-delay: 0.25s; }
-.animate-in:nth-child(6) { animation-delay: 0.3s; }
+.animate-in:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.animate-in:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.animate-in:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.animate-in:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.animate-in:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.animate-in:nth-child(6) {
+  animation-delay: 0.3s;
+}
 
 /* ============================================
    RESPONSIVE — Tablet+ 

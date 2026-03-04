@@ -5,180 +5,246 @@
 
 // Product data from CSV
 const products = [
-    {
-        id: "CF001",
-        name: "Highland Washed Arabica",
-        shortName: "Highland Washed",
-        country: "Ethiopia",
-        region: "Sidama",
-        elevation: "1900–2100 masl",
-        variety: "Heirloom",
-        process: "Washed",
-        flavorNotes: ["Citrus", "Floral", "Tea-like"],
-        harvest: "Jan–Mar",
-        grade: "Grade 1",
-        packaging: "GrainPro + Jute",
-        certifications: "Organic",
-        description: "This washed Arabica coffee is grown at high elevations in the Sidama region. The cool climate and careful washing process produce a clean cup with bright acidity and elegant floral notes.",
-        image: "images/cf001.jpg",
-        logo: "images/logo_cf001.jpg",
-        stationId: "WS01",
-        stationName: "Sidama Central Washing Station",
-        stationLocation: "Sidama, Ethiopia",
-        stationAltitude: "1950 m",
-        stationProcessing: "Washed & Natural",
-        stationWater: "Mountain Spring Water",
-        stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-        videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
-        visible: true
-    },
-    {
-        id: "CF002",
-        name: "Mountain Natural Arabica",
-        shortName: "Mountain Natural",
-        country: "Ethiopia",
-        region: "Yirgacheffe",
-        elevation: "1800–2000 masl",
-        variety: "Heirloom",
-        process: "Natural",
-        flavorNotes: ["Berry", "Sweet", "Wine-like"],
-        harvest: "Dec–Feb",
-        grade: "Grade 1",
-        packaging: "GrainPro + Jute",
-        certifications: "Organic",
-        description: "This natural processed coffee is dried slowly on raised beds, allowing fruit sugars to fully develop. The result is a sweet and expressive cup with ripe fruit character.",
-        image: "images/cf002.jpg",
-        logo: "images/logo_cf002.jpg",
-        stationId: "WS01",
-        stationName: "Sidama Central Washing Station",
-        stationLocation: "Sidama, Ethiopia",
-        stationAltitude: "1950 m",
-        stationProcessing: "Washed & Natural",
-        stationWater: "Mountain Spring Water",
-        stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-        videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
-        visible: true
-    },
-    {
-        id: "CF003",
-        name: "Forest Honey Process",
-        shortName: "Forest Honey",
-        country: "Ethiopia",
-        region: "Gedeb",
-        elevation: "1950–2150 masl",
-        variety: "Heirloom",
-        process: "Honey",
-        flavorNotes: ["Stone fruit", "Honey", "Smooth"],
-        harvest: "Jan–Mar",
-        grade: "Grade 1",
-        packaging: "GrainPro + Jute",
-        certifications: "—",
-        description: "This honey processed coffee balances sweetness and clarity. Partial mucilage removal during processing enhances body while preserving vibrant acidity.",
-        image: "images/cf003.jpg",
-        logo: "images/logo_cf003.jpg",
-        stationId: "WS02",
-        stationName: "Gedeb Highlands Washing Station",
-        stationLocation: "Gedeb, Ethiopia",
-        stationAltitude: "2050 m",
-        stationProcessing: "Honey & Washed",
-        stationWater: "River-fed Channels",
-        stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-        videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
-        visible: true
-    }
+  {
+    id: "CF001",
+    name: "Highland Washed Arabica",
+    shortName: "Highland Washed",
+    country: "Ethiopia",
+    region: "Sidama",
+    elevation: "1900–2100 masl",
+    variety: "Heirloom",
+    process: "Washed",
+    flavorNotes: ["Citrus", "Floral", "Tea-like"],
+    harvest: "Jan–Mar",
+    grade: "Grade 1",
+    packaging: "GrainPro + Jute",
+    certifications: "Organic",
+    description: "This washed Arabica coffee is grown at high elevations in the Sidama region. The cool climate and careful washing process produce a clean cup with bright acidity and elegant floral notes.",
+    image: "images/cf001.jpg",
+    logo: "images/logo_cf001.jpg",
+    stationId: "WS01",
+    stationName: "Sidama Central Washing Station",
+    stationLocation: "Sidama, Ethiopia",
+    stationAltitude: "1950 m",
+    stationProcessing: "Washed & Natural",
+    stationWater: "Mountain Spring Water",
+    stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
+    videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
+    visible: true
+  },
+  {
+    id: "CF002",
+    name: "Mountain Natural Arabica",
+    shortName: "Mountain Natural",
+    country: "Ethiopia",
+    region: "Yirgacheffe",
+    elevation: "1800–2000 masl",
+    variety: "Heirloom",
+    process: "Natural",
+    flavorNotes: ["Berry", "Sweet", "Wine-like"],
+    harvest: "Dec–Feb",
+    grade: "Grade 1",
+    packaging: "GrainPro + Jute",
+    certifications: "Organic",
+    description: "This natural processed coffee is dried slowly on raised beds, allowing fruit sugars to fully develop. The result is a sweet and expressive cup with ripe fruit character.",
+    image: "images/cf002.jpg",
+    logo: "images/logo_cf002.jpg",
+    stationId: "WS01",
+    stationName: "Sidama Central Washing Station",
+    stationLocation: "Sidama, Ethiopia",
+    stationAltitude: "1950 m",
+    stationProcessing: "Washed & Natural",
+    stationWater: "Mountain Spring Water",
+    stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
+    videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
+    visible: true
+  },
+  {
+    id: "CF003",
+    name: "Forest Honey Process",
+    shortName: "Forest Honey",
+    country: "Ethiopia",
+    region: "Gedeb",
+    elevation: "1950–2150 masl",
+    variety: "Heirloom",
+    process: "Honey",
+    flavorNotes: ["Stone fruit", "Honey", "Smooth"],
+    harvest: "Jan–Mar",
+    grade: "Grade 1",
+    packaging: "GrainPro + Jute",
+    certifications: "—",
+    description: "This honey processed coffee balances sweetness and clarity. Partial mucilage removal during processing enhances body while preserving vibrant acidity.",
+    image: "images/cf003.jpg",
+    logo: "images/logo_cf003.jpg",
+    stationId: "WS02",
+    stationName: "Gedeb Highlands Washing Station",
+    stationLocation: "Gedeb, Ethiopia",
+    stationAltitude: "2050 m",
+    stationProcessing: "Honey & Washed",
+    stationWater: "River-fed Channels",
+    stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
+    videoUrl: "https://www.youtube.com/embed/Ppxy7-DrnS4",
+    visible: true
+  }
 ];
 
 // Total grid slots (matching the Stitch design: 3 products + 3 coming soon)
 const TOTAL_SLOTS = 6;
 
+// i18n State
+let currentLang = localStorage.getItem('primrose-lang') || 'en';
+
+/* ============================================
+   TRANSLATION ENGINE
+   ============================================ */
+function updateContent() {
+  const t = translations[currentLang];
+
+  // Update static elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) {
+      el.innerHTML = t[key];
+    }
+  });
+
+  // Update document direction and lang
+  document.documentElement.lang = currentLang;
+  document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+  // Update button text
+  const langBtn = document.getElementById('current-lang');
+  if (langBtn) langBtn.textContent = currentLang.toUpperCase();
+
+  // Re-render dynamic components if they exist
+  if (document.getElementById('products-grid')) renderCollection();
+  if (document.getElementById('product-content')) renderProductDetail();
+}
+
+function changeLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('primrose-lang', lang);
+  updateContent();
+  toggleLangMenu(false);
+}
+
+function toggleLangMenu(force) {
+  const menu = document.getElementById('lang-menu');
+  if (!menu) return;
+  if (force !== undefined) {
+    menu.classList.toggle('active', force);
+  } else {
+    menu.classList.toggle('active');
+  }
+}
+
+// Close menu on click outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.lang-selector-container')) {
+    toggleLangMenu(false);
+  }
+});
+
 /* ============================================
    COLLECTION PAGE RENDERER
    ============================================ */
 function renderCollection() {
-    const grid = document.getElementById('products-grid');
-    if (!grid) return;
+  const grid = document.getElementById('products-grid');
+  if (!grid) return;
 
-    let html = '';
+  const t = translations[currentLang];
+  let html = '';
 
-    // Render real product cards
-    products.forEach((product, index) => {
-        html += `
+  // Render real product cards
+  products.forEach((product, index) => {
+    // Get translated product names/regions if available
+    const pKey = `p${index + 1}`;
+    const shortName = t[`${pKey}ShortName`] || product.shortName;
+    const region = t[`${pKey}Region`] || product.region;
+
+    html += `
       <a href="product.html?id=${product.id}" class="product-card animate-in" style="animation-delay: ${index * 0.08}s">
         <div class="product-card__image">
-          <img src="${product.image}" alt="${product.name}" loading="lazy">
+          <img src="${product.logo}" alt="${shortName}" loading="lazy">
         </div>
         <div class="product-card__accent"></div>
         <div class="product-card__info">
           <div class="product-card__id">${product.id}</div>
-          <div class="product-card__name">${product.shortName}</div>
-          <div class="product-card__region">${product.region}</div>
+          <div class="product-card__name">${shortName}</div>
+          <div class="product-card__region">${region}</div>
         </div>
       </a>`;
-    });
+  });
 
-    // Render "Coming Soon" placeholder cards
-    const remaining = TOTAL_SLOTS - products.length;
-    for (let i = 0; i < remaining; i++) {
-        html += `
+  // Render "Coming Soon" placeholder cards
+  const remaining = TOTAL_SLOTS - products.length;
+  for (let i = 0; i < remaining; i++) {
+    html += `
       <div class="product-card product-card--coming-soon animate-in" style="animation-delay: ${(products.length + i) * 0.08}s">
         <div class="product-card__image">
           <div class="coming-soon-content">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span>Coming Soon</span>
+            <span data-i18n="comingSoon">${t.comingSoon}</span>
           </div>
         </div>
         <div class="product-card__info" style="min-height: 52px;"></div>
       </div>`;
-    }
+  }
 
-    grid.innerHTML = html;
+  grid.innerHTML = html;
 }
 
 /* ============================================
    PRODUCT DETAIL PAGE RENDERER
    ============================================ */
 function renderProductDetail() {
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
 
-    const product = products.find(p => p.id === productId);
-    if (!product) {
-        document.getElementById('product-content').innerHTML = `
+  const pIndex = products.findIndex(p => p.id === productId);
+  const product = products[pIndex];
+  const t = translations[currentLang];
+
+  if (!product) {
+    document.getElementById('product-content').innerHTML = `
       <div style="text-align:center; padding: 4rem 2rem;">
-        <h2 style="color: var(--color-primary-dark); margin-bottom: 1rem;">Product Not Found</h2>
-        <p style="color: var(--color-text-light);">The product you're looking for doesn't exist.</p>
-        <a href="collection.html" style="display:inline-block; margin-top:1.5rem; color: var(--color-teal); font-weight:600;">← Back to Collection</a>
+        <h2 style="color: var(--color-primary-dark); margin-bottom: 1rem;">${t.notFoundTitle}</h2>
+        <p style="color: var(--color-text-light);">${t.notFoundDesc}</p>
+        <a href="collection.html" style="display:inline-block; margin-top:1.5rem; color: var(--color-teal); font-weight:600;">${t.backToColl}</a>
       </div>`;
-        return;
-    }
+    return;
+  }
 
-    // Update page title
-    document.getElementById('page-title').textContent = `${product.id} — ${product.name} | Primrose Coffee`;
-    document.getElementById('header-title').textContent = `${product.id} – ${product.name}`;
+  const pKey = `p${pIndex + 1}`;
+  const sKey = pIndex === 2 ? 's2' : 's1';
 
-    // SVG icon helpers
-    const icons = {
-        globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
-        pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
-        mountain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21l4-10 4 10"/><path d="M2 21h20"/><path d="M15 14l3 7"/><path d="M9 14l-3 7"/></svg>',
-        leaf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 1 8-1 3.5-3.5 6-6 7.5"/><path d="M11.7 7.5C13 12 12.5 16.5 11 20"/></svg>',
-        fire: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c-4.97 0-8-3.03-8-8 0-3.53 2.13-6 4-8l2 3c.68-1 1.21-2.36 1.5-4C15 2 18 5 18 8c0 2-1 4-2 5l-2-2c-.22 1.27-.68 2.77-2 4z"/></svg>',
-        calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
-        check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
-        coffee: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>',
-        play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
-        text: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
-        station: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>'
-    };
+  // Update page title
+  document.title = `${product.id} — ${t[`${pKey}Name`] || product.name} | Primrose Coffee`;
+  document.getElementById('header-title').textContent = `${product.id} – ${t[`${pKey}Name`] || product.name}`;
 
-    const content = document.getElementById('product-content');
-    content.innerHTML = `
-    <!-- Product Hero Image -->
+  // SVG icon helpers
+  const icons = {
+    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    mountain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21l4-10 4 10"/><path d="M2 21h20"/><path d="M15 14l3 7"/><path d="M9 14l-3 7"/></svg>',
+    leaf: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 19 2c1 2 2 4.5 1 8-1 3.5-3.5 6-6 7.5"/><path d="M11.7 7.5C13 12 12.5 16.5 11 20"/></svg>',
+    fire: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c-4.97 0-8-3.03-8-8 0-3.53 2.13-6 4-8l2 3c.68-1 1.21-2.36 1.5-4C15 2 18 5 18 8c0 2-1 4-2 5l-2-2c-.22 1.27-.68 2.77-2 4z"/></svg>',
+    calendar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+    coffee: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>',
+    play: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>',
+    text: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>',
+    station: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>'
+  };
+
+  const content = document.getElementById('product-content');
+  content.innerHTML = `
+    <!-- Product Hero Image (Cherry/Plantation) -->
     <div class="product-hero animate-in">
-      <img src="${product.image}" alt="${product.name}">
+      <img src="${product.image}" alt="${t[`${pKey}Name`]}">
       <div class="product-hero__overlay">
-        <div class="product-hero__tag">EXCLUSIVE MICRO-LOT</div>
-        <h1 class="product-hero__name">${product.name}</h1>
+        <div class="product-hero__tag">${t.exclusive}</div>
+        <h1 class="product-hero__name">${t[`${pKey}Name`] || product.name}</h1>
       </div>
     </div>
 
@@ -186,35 +252,35 @@ function renderProductDetail() {
     <div class="profile-card animate-in" style="animation-delay: 0.1s">
       <div class="profile-card__header">
         ${icons.coffee}
-        COFFEE PROFILE
+        ${t.profile}
       </div>
 
       <div class="profile-row">
-        <div class="profile-row__label">${icons.globe} ORIGIN</div>
-        <div class="profile-row__value">${product.country}</div>
+        <div class="profile-row__label">${icons.globe} ${t.origin}</div>
+        <div class="profile-row__value">${t[`${pKey}Country`] || product.country}</div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.pin} REGION</div>
-        <div class="profile-row__value">${product.region}</div>
+        <div class="profile-row__label">${icons.pin} ${t.region}</div>
+        <div class="profile-row__value">${t[`${pKey}Region`] || product.region}</div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.mountain} ELEVATION</div>
+        <div class="profile-row__label">${icons.mountain} ${t.elevation}</div>
         <div class="profile-row__value">${product.elevation}</div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.leaf} VARIETY</div>
+        <div class="profile-row__label">${icons.leaf} ${t.variety}</div>
         <div class="profile-row__value"><em>${product.variety}</em></div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.fire} PROCESS</div>
-        <div class="profile-row__value">${product.process}</div>
+        <div class="profile-row__label">${icons.fire} ${t.process}</div>
+        <div class="profile-row__value">${t[`${pKey}Process`] || product.process}</div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.calendar} HARVEST</div>
-        <div class="profile-row__value">${product.harvest}</div>
+        <div class="profile-row__label">${icons.calendar} ${t.harvest}</div>
+        <div class="profile-row__value">${t[`${pKey}Harvest`] || product.harvest}</div>
       </div>
       <div class="profile-row">
-        <div class="profile-row__label">${icons.check} GRADE</div>
+        <div class="profile-row__label">${icons.check} ${t.grade}</div>
         <div class="profile-row__value">${product.grade}</div>
       </div>
     </div>
@@ -223,11 +289,11 @@ function renderProductDetail() {
     <div class="description-section animate-in" style="animation-delay: 0.15s">
       <div class="description-section__title">
         ${icons.text}
-        DESCRIPTION
+        ${t.description}
       </div>
-      <p class="description-section__text">${product.description}</p>
+      <p class="description-section__text">${t[`${pKey}Desc`] || product.description}</p>
       <div class="flavor-notes">
-        ${product.flavorNotes.map(note => `<span class="flavor-tag">${note}</span>`).join('')}
+        ${(t[`${pKey}Notes`] || product.flavorNotes).map(note => `<span class="flavor-tag">${note}</span>`).join('')}
       </div>
     </div>
 
@@ -235,31 +301,31 @@ function renderProductDetail() {
     <div class="station-section animate-in" style="animation-delay: 0.2s">
       <div class="station-section__header">
         ${icons.station}
-        WASHING STATION
+        ${t.station}
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Station Name</div>
-        <div class="station-detail__value">${product.stationName}</div>
+        <div class="station-detail__label">${t.stationName}</div>
+        <div class="station-detail__value">${t[`${sKey}Name`] || product.stationName}</div>
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Location</div>
-        <div class="station-detail__value">${product.stationLocation}</div>
+        <div class="station-detail__label">${t.location}</div>
+        <div class="station-detail__value">${t[`${sKey}Loc`] || product.stationLocation}</div>
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Altitude</div>
+        <div class="station-detail__label">${t.altitude}</div>
         <div class="station-detail__value">${product.stationAltitude}</div>
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Processing</div>
-        <div class="station-detail__value">${product.stationProcessing}</div>
+        <div class="station-detail__label">${t.processing}</div>
+        <div class="station-detail__value">${t[`${sKey}Proc`] || product.stationProcessing}</div>
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Water Source</div>
-        <div class="station-detail__value">${product.stationWater}</div>
+        <div class="station-detail__label">${t.waterSource}</div>
+        <div class="station-detail__value">${t[`${sKey}Water`] || product.stationWater}</div>
       </div>
       <div class="station-detail">
-        <div class="station-detail__label">Sustainability</div>
-        <div class="station-detail__value">${product.stationNotes}</div>
+        <div class="station-detail__label">${t.sustain}</div>
+        <div class="station-detail__value">${t[`${sKey}Notes`] || product.stationNotes}</div>
       </div>
     </div>
 
@@ -267,7 +333,7 @@ function renderProductDetail() {
     <div class="video-section animate-in" style="animation-delay: 0.25s">
       <div class="video-section__header">
         <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E74C3C"><circle cx="12" cy="12" r="10" fill="#E74C3C"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
-        ORIGIN VIDEO
+        ${t.video}
       </div>
       <div class="video-wrapper">
         <iframe src="${product.videoUrl}" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
@@ -275,8 +341,8 @@ function renderProductDetail() {
     </div>
   `;
 
-    // Render footer social icons
-    document.getElementById('footer-social').innerHTML = `
+  // Render footer social icons
+  document.getElementById('footer-social').innerHTML = `
     <a href="https://wa.me/" class="footer-social__icon" target="_blank" rel="noopener" aria-label="WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
@@ -293,17 +359,23 @@ function renderProductDetail() {
    SHARE FUNCTIONALITY
    ============================================ */
 function shareProduct() {
-    if (navigator.share) {
-        navigator.share({
-            title: document.title,
-            url: window.location.href
-        }).catch(() => { });
-    } else {
-        // Fallback: copy URL to clipboard
-        navigator.clipboard.writeText(window.location.href).then(() => {
-            const btn = document.querySelector('.detail-header__share');
-            btn.style.color = 'var(--color-accent)';
-            setTimeout(() => { btn.style.color = ''; }, 1500);
-        });
-    }
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: window.location.href
+    }).catch(() => { });
+  } else {
+    // Fallback: copy URL to clipboard
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('.detail-header__share');
+      btn.style.color = 'var(--color-accent)';
+      setTimeout(() => { btn.style.color = ''; }, 1500);
+    });
+  }
 }
+
+// Initial Content Load
+document.addEventListener('DOMContentLoaded', updateContent);
+
+// Initial Content Load
+document.addEventListener('DOMContentLoaded', updateContent);
