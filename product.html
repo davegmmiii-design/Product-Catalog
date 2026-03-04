@@ -22,6 +22,21 @@
             </svg>
         </a>
         <span class="detail-header__title" id="header-title"></span>
+        <div class="lang-selector-container">
+            <button class="lang-selector" aria-label="Select language" onclick="toggleLangMenu()">
+                <span id="current-lang">EN</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+            <div class="lang-menu" id="lang-menu">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('ar')">العربية</button>
+                <button onclick="changeLanguage('zh')">中文</button>
+                <button onclick="changeLanguage('ja')">日本語</button>
+                <button onclick="changeLanguage('ko')">한국어</button>
+            </div>
+        </div>
         <button class="detail-header__share" aria-label="Share" onclick="shareProduct()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -51,16 +66,16 @@
                 <line x1="12" y1="19" x2="12" y2="5" />
                 <polyline points="5 12 12 5 19 12" />
             </svg>
-            BACK TO TOP
+            <span data-i18n="backToTop">BACK TO TOP</span>
         </button>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="footerTrade">
             SPECIALTY TRADE CO. &copy; 2024
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
-    <script>renderProductDetail();</script>
 </body>
 
 </html>

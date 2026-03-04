@@ -22,14 +22,28 @@
             </svg>
         </a>
         <span class="page-header__brand">PRIMROSE</span>
-        <div style="width:36px"></div>
+        <div class="lang-selector-container">
+            <button class="lang-selector" aria-label="Select language" onclick="toggleLangMenu()">
+                <span id="current-lang">EN</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9l6 6 6-6" />
+                </svg>
+            </button>
+            <div class="lang-menu" id="lang-menu">
+                <button onclick="changeLanguage('en')">English</button>
+                <button onclick="changeLanguage('ar')">العربية</button>
+                <button onclick="changeLanguage('zh')">中文</button>
+                <button onclick="changeLanguage('ja')">日本語</button>
+                <button onclick="changeLanguage('ko')">한국어</button>
+            </div>
+        </div>
     </header>
 
     <!-- Breadcrumb -->
     <nav class="breadcrumb">
-        <a href="index.html">HOME</a>
+        <a href="index.html" data-i18n="navHome">HOME</a>
         <span> › </span>
-        <span>COLLECTION</span>
+        <span data-i18n="navCollection">COLLECTION</span>
     </nav>
 
     <!-- Product Grid -->
@@ -39,7 +53,7 @@
 
     <!-- Footer -->
     <footer class="page-footer">
-        <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-i18n="backToTop">
             BACK TO TOP
         </button>
 
@@ -51,14 +65,14 @@
             <a href="mailto:primrosecoffee@gmail.com">Gmail</a>
         </div>
 
-        <div class="footer-copyright">
+        <div class="footer-copyright" data-i18n="footerCopy">
             &copy; 2024 PRIMROSE EXPORT<br>
             PREMIUM ETHIOPIAN COFFEE SPECIALISTS
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
-    <script>renderCollection();</script>
 </body>
 
 </html>
