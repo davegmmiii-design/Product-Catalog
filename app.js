@@ -398,11 +398,13 @@ document.addEventListener('DOMContentLoaded', () => {
    INTERACTIVE REFINEMENTS (IMMERSION 3.0)
    ============================================ */
 function initInteractions() {
+  initPreloader();
   initScrollReveal();
   initMagneticButton();
   initLogoTilt();
   initParallax();
   initScrollProgress();
+  initWindowParallax();
 }
 
 // 0. Scroll Progress Bar
@@ -495,4 +497,45 @@ function initParallax() {
     if (logo) logo.parentElement.style.transform = `translateY(${scrolled * 0.1}px)`;
     if (sideText) sideText.style.transform = `rotate(-90deg) translateX(${scrolled * 0.15}px)`;
   });
+}
+
+// 5. Boutique Preloader
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  // Cinematic exit on load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      preloader.classList.add('preloader--hidden');
+    }, 800);
+  });
+
+  // Safety fallback
+  setTimeout(() => {
+    if (preloader) preloader.classList.add('preloader--hidden');
+  }, 4000);
+}
+
+// 6. Window Parallax for Product Cards
+function initWindowParallax() {
+  const cards = document.querySelectorAll('.product-card__image img');
+  if (cards.length === 0) return;
+
+  const handleParallax = () => {
+    cards.forEach(img => {
+      const rect = img.parentElement.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const distanceToCenter = (rect.top + rect.height / 2) - (windowHeight / 2);
+        const scrollFactor = 0.06;
+        const translateY = distanceToCenter * scrollFactor;
+        img.style.transform = `scale(1.15) translateY(${translateY}px)`;
+      }
+    });
+  };
+
+  window.addEventListener('scroll', () => requestAnimationFrame(handleParallax));
+  handleParallax();
 }
