@@ -359,6 +359,27 @@ function renderProductDetail() {
 }
 
 /* ============================================
+   SHARE FUNCTIONALITY
+   ============================================ */
+function shareProduct() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: window.location.href
+    }).catch(() => { });
+  } else {
+    // Fallback: copy URL to clipboard
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.querySelector('.detail-header__share');
+      if (btn) {
+        btn.style.color = 'var(--color-accent)';
+        setTimeout(() => { btn.style.color = ''; }, 1500);
+      }
+    });
+  }
+}
+
+/* ============================================
    INITIALIZATION
    ============================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -370,15 +391,4 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     updateContent();
   }
-});
-btn.style.color = 'var(--color-accent)';
-setTimeout(() => { btn.style.color = ''; }, 1500);
-    });
-  }
-}
-
-// Initial Content Load
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('App initialization: current language is', currentLang);
-  updateContent();
 });
