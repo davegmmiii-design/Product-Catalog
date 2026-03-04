@@ -539,3 +539,5 @@ function initWindowParallax() {
   window.addEventListener('scroll', () => requestAnimationFrame(handleParallax));
   handleParallax();
 }
+
+

@@ -78,6 +78,7 @@ html {
   transition: width 0.1s ease-out;
 }
 
+
 /* Signature Preloader */
 #preloader {
   position: fixed;
@@ -1252,8 +1253,9 @@ button {
 @media (max-width: 600px) {
 
   .hero__topbar,
-  .page-header {
-    justify-content: center !important;
+  .page-header,
+  .detail-header {
+    justify-content: flex-start !important;
     gap: 1.5rem;
     padding: 1rem;
   }

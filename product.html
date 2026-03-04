@@ -25,14 +25,6 @@
 
     <!-- Sticky Header -->
     <header class="detail-header" id="top">
-        <a href="collection.html" class="detail-header__back" aria-label="Back to collection">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12" />
-                <polyline points="12 19 5 12 12 5" />
-            </svg>
-        </a>
-        <span class="detail-header__title" id="header-title"></span>
         <div class="lang-selector-container">
             <button class="lang-selector" aria-label="Select language" onclick="toggleLangMenu()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"
@@ -56,6 +48,14 @@
                 <button onclick="changeLanguage('ko')">한국어</button>
             </div>
         </div>
+        <a href="collection.html" class="detail-header__back" aria-label="Back to collection">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12" />
+                <polyline points="12 19 5 12 12 5" />
+            </svg>
+        </a>
+        <span class="detail-header__title" id="header-title"></span>
         <button class="detail-header__share" aria-label="Share" onclick="shareProduct()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
