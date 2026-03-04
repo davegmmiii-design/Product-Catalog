@@ -29,8 +29,8 @@ const translations = {
         notFoundTitle: "Product Not Found",
         notFoundDesc: "The product you're looking for doesn't exist.",
         backToColl: "← Back to Collection",
-        footerCopy: "&copy; 2026 PRIMROSE EXPORT<br>PREMIUM ETHIOPIAN COFFEE SPECIALISTS",
-        footerTrade: "Primrose Speciality coffee 2026",
+        footerCopy: "Primrose speciality coffee &copy; 2026",
+        footerTrade: "Primrose speciality coffee &copy; 2026",
 
         // Products
         p1Name: "Highland Washed Arabica",
