@@ -98,8 +98,8 @@ const translations = {
         notFoundTitle: "المنتج غير موجود",
         notFoundDesc: "المنتج الذي تبحث عنه غير موجود.",
         backToColl: "← العودة إلى المجموعة",
-        footerCopy: "&copy; 2024 بريمروز للتصدير<br>متخصصون في القهوة الإثيوبية الفاخرة",
-        footerTrade: "شركة التجارة المختصة &copy; 2024",
+        footerCopy: "Primrose speciality coffee &copy; 2026",
+        footerTrade: "Primrose speciality coffee &copy; 2026",
 
         p1Name: "أرابيكا المرتفعات المغسولة",
         p1ShortName: "المرتفعات المغسولة",
@@ -166,8 +166,8 @@ const translations = {
         notFoundTitle: "找不到产品",
         notFoundDesc: "您寻找的产品不存在。",
         backToColl: "← 返回系列",
-        footerCopy: "&copy; 2024 PRIMROSE 出口<br>高级埃塞俄比亚咖啡专家",
-        footerTrade: "专业贸易公司 &copy; 2024",
+        footerCopy: "Primrose speciality coffee &copy; 2026",
+        footerTrade: "Primrose speciality coffee &copy; 2026",
 
         p1Name: "高地水洗阿拉比卡",
         p1ShortName: "高地水洗",
@@ -234,8 +234,8 @@ const translations = {
         notFoundTitle: "該当商品なし",
         notFoundDesc: "お探しの商品は見つかりませんでした。",
         backToColl: "← コレクションへ戻る",
-        footerCopy: "&copy; 2024 PRIMROSE EXPORT<br>プレミアムエチオピアコーヒー専門店",
-        footerTrade: "SPECIALTY TRADE CO. &copy; 2024",
+        footerCopy: "Primrose speciality coffee &copy; 2026",
+        footerTrade: "Primrose speciality coffee &copy; 2026",
 
         p1Name: "ハイランド・ウォッシュド・アラビカ",
         p1ShortName: "ハイランド・ウォッシュド",
@@ -302,8 +302,8 @@ const translations = {
         notFoundTitle: "제품을 찾을 수 없음",
         notFoundDesc: "찾으시는 제품이 존재하지 않습니다.",
         backToColl: "← 컬렉션으로 돌아가기",
-        footerCopy: "&copy; 2024 PRIMROSE EXPORT<br>프리미엄 에티오피아 커피 전문",
-        footerTrade: "SPECIALTY TRADE CO. &copy; 2024",
+        footerCopy: "Primrose speciality coffee &copy; 2026",
+        footerTrade: "Primrose speciality coffee &copy; 2026",
 
         p1Name: "하이랜드 워시드 아라비카",
         p1ShortName: "하이랜드 워시드",
