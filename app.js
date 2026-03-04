@@ -163,7 +163,7 @@ function renderCollection() {
     const region = t[`${pKey}Region`] || product.region;
 
     html += `
-      <a href="product.html?id=${product.id}" class="product-card animate-in" style="animation-delay: ${index * 0.08}s">
+      <a href="product.html?id=${product.id}" class="product-card reveal reveal--delay-${index % 3 + 1}">
         <div class="product-card__image">
           <img src="${product.logo}" alt="${shortName}" loading="lazy">
         </div>
@@ -180,7 +180,7 @@ function renderCollection() {
   const remaining = TOTAL_SLOTS - products.length;
   for (let i = 0; i < remaining; i++) {
     html += `
-      <div class="product-card product-card--coming-soon animate-in" style="animation-delay: ${(products.length + i) * 0.08}s">
+      <div class="product-card product-card--coming-soon reveal reveal--delay-${(products.length + i) % 3 + 1}">
         <div class="product-card__image">
           <div class="coming-soon-content">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -207,20 +207,20 @@ function renderProductDetail() {
 
   if (!product) {
     document.getElementById('product-content').innerHTML = `
-      <div style="text-align:center; padding: 4rem 2rem;">
+      < div style = "text-align:center; padding: 4rem 2rem;" >
         <h2 style="color: var(--color-primary-dark); margin-bottom: 1rem;">${t.notFoundTitle}</h2>
         <p style="color: var(--color-text-light);">${t.notFoundDesc}</p>
         <a href="collection.html" style="display:inline-block; margin-top:1.5rem; color: var(--color-teal); font-weight:600;">${t.backToColl}</a>
-      </div>`;
+      </div > `;
     return;
   }
 
-  const pKey = `p${pIndex + 1}`;
+  const pKey = `p${pIndex + 1} `;
   const sKey = pIndex === 2 ? 's2' : 's1';
 
   // Update page title
   document.title = `${product.id} — ${t[`${pKey}Name`] || product.name} | Primrose Coffee`;
-  document.getElementById('header-title').textContent = `${product.id} – ${t[`${pKey}Name`] || product.name}`;
+  document.getElementById('header-title').textContent = `${product.id} – ${t[`${pKey}Name`] || product.name} `;
 
   // SVG icon helpers
   const icons = {
@@ -240,7 +240,7 @@ function renderProductDetail() {
   const content = document.getElementById('product-content');
   content.innerHTML = `
     <!-- Product Hero Image (Cherry/Plantation) -->
-    <div class="product-hero animate-in">
+    <div class="product-hero reveal">
       <img src="${product.image}" alt="${t[`${pKey}Name`]}">
       <div class="product-hero__overlay">
         <div class="product-hero__tag">${t.exclusive}</div>
@@ -249,7 +249,7 @@ function renderProductDetail() {
     </div>
 
     <!-- Coffee Profile Card -->
-    <div class="profile-card animate-in" style="animation-delay: 0.1s">
+    <div class="profile-card reveal reveal--delay-1">
       <div class="profile-card__header">
         ${icons.coffee}
         ${t.profile}
@@ -285,7 +285,7 @@ function renderProductDetail() {
       </div>
     </div>
 
-    <!-- Description -->
+    <!--Description -->
     <div class="description-section animate-in" style="animation-delay: 0.15s">
       <div class="description-section__title">
         ${icons.text}
@@ -297,7 +297,7 @@ function renderProductDetail() {
       </div>
     </div>
 
-    <!-- Washing Station -->
+    <!--Washing Station-- >
     <div class="station-section animate-in" style="animation-delay: 0.2s">
       <div class="station-section__header">
         ${icons.station}
@@ -329,25 +329,25 @@ function renderProductDetail() {
       </div>
     </div>
 
-    <!-- Origin Video -->
-    <div class="video-section animate-in" style="animation-delay: 0.25s">
-      <div class="video-section__header">
-        <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E74C3C"><circle cx="12" cy="12" r="10" fill="#E74C3C"/><path d="M10 8l6 4-6 4V8z" fill="white"/></svg>
-        ${t.video}
+    <!--Origin Video-- >
+      <div class="video-section animate-in" style="animation-delay: 0.25s">
+        <div class="video-section__header">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E74C3C"><circle cx="12" cy="12" r="10" fill="#E74C3C" /><path d="M10 8l6 4-6 4V8z" fill="white" /></svg>
+          ${t.video}
+        </div>
+        <div class="video-wrapper">
+          <iframe src="${product.videoUrl}" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
       </div>
-      <div class="video-wrapper">
-        <iframe src="${product.videoUrl}" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-      </div>
-    </div>
-  `;
+    `;
 
   // Render footer social icons
   const footerSocial = document.getElementById('footer-social');
   if (footerSocial) {
     footerSocial.innerHTML = `
-      <a href="mailto:primroseplc@gmail.com" class="footer-social__icon social-icon--gmail" aria-label="Gmail">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.634-1.634 1.634h-3.819V11.48L12 16.52l-6.547-5.04v9.52H1.634A1.634 1.634 0 0 1 0 19.366V5.457c0-1.29 1.454-2.022 2.474-1.227L12 11.242l9.526-7.012c1.02-.795 2.474-.063 2.474 1.227z"/></svg>
-      </a>
+      < a href = "mailto:primroseplc@gmail.com" class="footer-social__icon social-icon--gmail" aria - label="Gmail" >
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.634-1.634 1.634h-3.819V11.48L12 16.52l-6.547-5.04v9.52H1.634A1.634 1.634 0 0 1 0 19.366V5.457c0-1.29 1.454-2.022 2.474-1.227L12 11.242l9.526-7.012c1.02-.795 2.474-.063 2.474 1.227z" /></svg>
+      </a >
       <a href="https://instagram.com/primrose.coffee" class="footer-social__icon social-icon--instagram" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
       </a>
@@ -387,8 +387,97 @@ document.addEventListener('DOMContentLoaded', () => {
   // Robust initialization check
   if (typeof translations === 'undefined') {
     console.error('Translations dictionary not found! Retrying in 100ms...');
-    setTimeout(() => { if (typeof translations !== 'undefined') updateContent(); }, 100);
+    setTimeout(() => { if (typeof translations !== 'undefined') { updateContent(); initInteractions(); } }, 100);
   } else {
     updateContent();
+    initInteractions();
   }
 });
+
+/* ============================================
+   INTERACTIVE REFINEMENTS (IMMERSION 3.0)
+   ============================================ */
+function initInteractions() {
+  initScrollReveal();
+  initMagneticButton();
+  initLogoTilt();
+  initParallax();
+}
+
+// 1. Scroll Reveal Animation
+function initScrollReveal() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// 2. Magnetic "VIEW COLLECTION" Button
+function initMagneticButton() {
+  const btn = document.querySelector('.hero__cta');
+  if (!btn) return;
+
+  document.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const btnX = rect.left + rect.width / 2;
+    const btnY = rect.top + rect.height / 2;
+
+    const distance = Math.hypot(e.clientX - btnX, e.clientY - btnY);
+    const radius = 150;
+
+    if (distance < radius) {
+      const strength = 20;
+      const x = (e.clientX - btnX) / radius * strength;
+      const y = (e.clientY - btnY) / radius * strength;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    } else {
+      btn.style.transform = `translate(0, 0)`;
+    }
+  });
+}
+
+// 3. 3D Tilt Effect for Logo
+function initLogoTilt() {
+  const logoBox = document.querySelector('.hero__logo-box');
+  if (!logoBox) return;
+
+  logoBox.addEventListener('mousemove', (e) => {
+    const rect = logoBox.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (centerY - y) / 10;
+    const rotateY = (x - centerX) / 10;
+
+    logoBox.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  });
+
+  logoBox.addEventListener('mouseleave', () => {
+    logoBox.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+  });
+}
+
+// 4. Parallax Floating Elements
+function initParallax() {
+  const logo = document.querySelector('.hero__logo-box');
+  const sideText = document.querySelector('.hero__side-text');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    if (logo) logo.parentElement.style.transform = `translateY(${scrolled * 0.1}px)`;
+    if (sideText) sideText.style.transform = `rotate(-90deg) translateX(${scrolled * 0.15}px)`;
+  });
+}
