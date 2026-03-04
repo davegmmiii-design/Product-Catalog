@@ -529,9 +529,9 @@ function initWindowParallax() {
 
       if (rect.top < windowHeight && rect.bottom > 0) {
         const distanceToCenter = (rect.top + rect.height / 2) - (windowHeight / 2);
-        const scrollFactor = 0.06;
+        const scrollFactor = 0.04;
         const translateY = distanceToCenter * scrollFactor;
-        img.style.transform = `scale(1.15) translateY(${translateY}px)`;
+        img.style.transform = `scale(1.1) translateY(${translateY}px)`;
       }
     });
   };
