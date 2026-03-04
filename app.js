@@ -215,7 +215,7 @@ function renderProductDetail() {
     return;
   }
 
-  const pKey = `p${pIndex + 1} `;
+  const pKey = `p${pIndex + 1}`;
   const sKey = pIndex === 2 ? 's2' : 's1';
 
   // Update page title
@@ -297,7 +297,7 @@ function renderProductDetail() {
       </div>
     </div>
 
-    <!--Washing Station-- >
+    <!-- Washing Station -->
     <div class="station-section animate-in" style="animation-delay: 0.2s">
       <div class="station-section__header">
         ${icons.station}
@@ -329,7 +329,7 @@ function renderProductDetail() {
       </div>
     </div>
 
-    <!--Origin Video-- >
+    <!-- Origin Video -->
       <div class="video-section animate-in" style="animation-delay: 0.25s">
         <div class="video-section__header">
           <svg viewBox="0 0 24 24" fill="currentColor" style="color: #E74C3C"><circle cx="12" cy="12" r="10" fill="#E74C3C" /><path d="M10 8l6 4-6 4V8z" fill="white" /></svg>
