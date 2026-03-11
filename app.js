@@ -29,7 +29,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1XrCTqDUiPATPfSYFuwoDGRUW9xPYM936",
+    videoUrl: "https://drive.google.com/file/d/1XrCTqDUiPATPfSYFuwoDGRUW9xPYM936/preview",
     visible: true
   },
   {
@@ -56,7 +56,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1bp_uosCS6WlWNGXwKZs5y2iLHtKu0y3I",
+    videoUrl: "https://drive.google.com/file/d/1bp_uosCS6WlWNGXwKZs5y2iLHtKu0y3I/preview",
     visible: true
   },
   {
@@ -83,7 +83,7 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1aJ_WIzLSQV_1_Lq3givNXkEibrcipIKi",
+    videoUrl: "https://drive.google.com/file/d/1aJ_WIzLSQV_1_Lq3givNXkEibrcipIKi/preview",
     visible: true
   },
   {
@@ -110,7 +110,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1rd7-ZNWuXhE_7KrByRaIBNIUCPFkbsHD",
+    videoUrl: "https://drive.google.com/file/d/1rd7-ZNWuXhE_7KrByRaIBNIUCPFkbsHD/preview",
     visible: true
   },
   {
@@ -137,7 +137,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1CgIDU0NZVpNC4rPZVHDXn7iqtrtH228q",
+    videoUrl: "https://drive.google.com/file/d/1CgIDU0NZVpNC4rPZVHDXn7iqtrtH228q/preview",
     visible: true
   },
   {
@@ -164,7 +164,7 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://drive.google.com/uc?export=download&id=1SCA0hQS9eEmCxr8oohmvak6iGeHPeGbm",
+    videoUrl: "https://drive.google.com/file/d/1SCA0hQS9eEmCxr8oohmvak6iGeHPeGbm/preview",
     visible: true
   }
 ];
@@ -417,10 +417,7 @@ function renderProductDetail() {
           ${t.video}
         </div>
         <div class="video-wrapper">
-          <video controls playsinline preload="metadata" class="origin-video-player" style="width: 100%; height: 100%; border-radius: var(--radius-md); background: #000;">
-            <source src="${product.videoUrl}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <iframe id="origin-video" src="${product.videoUrl}" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 100%; border-radius: var(--radius-md); border: none;"></iframe>
         </div>
       </div>
     `;
