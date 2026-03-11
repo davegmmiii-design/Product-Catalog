@@ -246,7 +246,7 @@ function renderCollection() {
     html += `
       <a href="product.html?id=${product.id}" class="product-card reveal reveal--delay-${index % 3 + 1}">
         <div class="product-card__image">
-          <img src="${product.image}" alt="${shortName}" loading="lazy">
+          <img src="${product.logo}" alt="${shortName}" loading="lazy">
         </div>
         <div class="product-card__accent"></div>
         <div class="product-card__info">
