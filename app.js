@@ -29,7 +29,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://www.youtube.com/embed/evO2fM6gLf0",
+    videoUrl: "https://www.youtube.com/embed/evO2fM6gLf0?rel=0",
     visible: true
   },
   {
@@ -56,7 +56,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://www.youtube.com/embed/SZm2s0qTwBI",
+    videoUrl: "https://www.youtube.com/embed/SZm2s0qTwBI?rel=0",
     visible: true
   },
   {
@@ -83,7 +83,7 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://www.youtube.com/embed/JyGyMV0wACA",
+    videoUrl: "https://www.youtube.com/embed/JyGyMV0wACA?rel=0",
     visible: true
   },
   {
@@ -110,7 +110,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://www.youtube.com/embed/3CKNLAdbc3c",
+    videoUrl: "https://www.youtube.com/embed/3CKNLAdbc3c?rel=0",
     visible: true
   },
   {
@@ -137,7 +137,7 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://www.youtube.com/embed/evO2fM6gLf0",
+    videoUrl: "https://www.youtube.com/embed/evO2fM6gLf0?rel=0",
     visible: true
   },
   {
@@ -164,7 +164,7 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://www.youtube.com/embed/3CKNLAdbc3c",
+    videoUrl: "https://www.youtube.com/embed/3CKNLAdbc3c?rel=0",
     visible: true
   }
 ];
