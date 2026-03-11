@@ -20,8 +20,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "Organic",
     description: "This washed Arabica coffee is grown at high elevations in the Sidama region. The cool climate and careful washing process produce a clean cup with bright acidity and elegant floral notes.",
-    image: "images/cf001.jpg",
-    logo: "https://drive.google.com/file/d/1w5mFi7ehvAlJDzCnw5gnKEmFbm3M2Mxf/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=15Emr7zOqKeVQl_Hr7Og7J0-F5W2yzoFQ",
+    logo: "https://drive.google.com/uc?export=view&id=1w5mFi7ehvAlJDzCnw5gnKEmFbm3M2Mxf",
     stationId: "WS01",
     stationName: "Sidama Central Washing Station",
     stationLocation: "Sidama, Ethiopia",
@@ -47,8 +47,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "Organic",
     description: "This natural processed coffee is dried slowly on raised beds, allowing fruit sugars to fully develop. The result is a sweet and expressive cup with ripe fruit character.",
-    image: "images/cf002.jpg",
-    logo: "https://drive.google.com/file/d/1GIsKJMjePUpOI_dZqwuEVfa1UzvKfdaS/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=1D3S_Etig8R3LUdx1GJg_q2UY7N-VDYhB",
+    logo: "https://drive.google.com/uc?export=view&id=1GIsKJMjePUpOI_dZqwuEVfa1UzvKfdaS",
     stationId: "WS01",
     stationName: "Sidama Central Washing Station",
     stationLocation: "Sidama, Ethiopia",
@@ -74,8 +74,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "—",
     description: "This honey processed coffee balances sweetness and clarity. Partial mucilage removal during processing enhances body while preserving vibrant acidity.",
-    image: "images/cf003.jpg",
-    logo: "https://drive.google.com/file/d/1o3ssrsL0wEqDZepHiolcxxHwKNElHB6F/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=1otrF8G12x9yRz98vZhsCL8CkEN1Sy4ce",
+    logo: "https://drive.google.com/uc?export=view&id=1o3ssrsL0wEqDZepHiolcxxHwKNElHB6F",
     stationId: "WS02",
     stationName: "Gedeb Highlands Washing Station",
     stationLocation: "Gedeb, Ethiopia",
@@ -101,8 +101,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "Organic",
     description: "This washed Arabica coffee is grown at high elevations in the Sidama region. The cool climate and careful washing process produce a clean cup with bright acidity and elegant floral notes.",
-    image: "images/cf001.jpg",
-    logo: "https://drive.google.com/file/d/1fAZ9v60HWrcazNBfbuskvtDFPuJF54cL/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=15Emr7zOqKeVQl_Hr7Og7J0-F5W2yzoFQ",
+    logo: "https://drive.google.com/uc?export=view&id=1fAZ9v60HWrcazNBfbuskvtDFPuJF54cL",
     stationId: "WS01",
     stationName: "Sidama Central Washing Station",
     stationLocation: "Sidama, Ethiopia",
@@ -128,8 +128,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "Organic",
     description: "This natural processed coffee is dried slowly on raised beds, allowing fruit sugars to fully develop. The result is a sweet and expressive cup with ripe fruit character.",
-    image: "images/cf002.jpg",
-    logo: "https://drive.google.com/file/d/1Vgz4DZ6q64ARla48a-pGInWTm4FF8f_q/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=1D3S_Etig8R3LUdx1GJg_q2UY7N-VDYhB",
+    logo: "https://drive.google.com/uc?export=view&id=1Vgz4DZ6q64ARla48a-pGInWTm4FF8f_q",
     stationId: "WS01",
     stationName: "Sidama Central Washing Station",
     stationLocation: "Sidama, Ethiopia",
@@ -155,8 +155,8 @@ const products = [
     packaging: "GrainPro + Jute",
     certifications: "—",
     description: "This honey processed coffee balances sweetness and clarity. Partial mucilage removal during processing enhances body while preserving vibrant acidity.",
-    image: "images/cf003.jpg",
-    logo: "https://drive.google.com/file/d/1Sdep2FZf8RT1TD8o1Oq3DhYQBXU83i89/view?usp=drive_link",
+    image: "https://drive.google.com/uc?export=view&id=1otrF8G12x9yRz98vZhsCL8CkEN1Sy4ce",
+    logo: "https://drive.google.com/uc?export=view&id=1Sdep2FZf8RT1TD8o1Oq3DhYQBXU83i89",
     stationId: "WS02",
     stationName: "Gedeb Highlands Washing Station",
     stationLocation: "Gedeb, Ethiopia",
@@ -246,7 +246,7 @@ function renderCollection() {
     html += `
       <a href="product.html?id=${product.id}" class="product-card reveal reveal--delay-${index % 3 + 1}">
         <div class="product-card__image">
-          <img src="${product.logo}" alt="${shortName}" loading="lazy">
+          <img src="${product.image}" alt="${shortName}" loading="lazy">
         </div>
         <div class="product-card__accent"></div>
         <div class="product-card__info">
