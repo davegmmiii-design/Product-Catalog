@@ -417,13 +417,13 @@ function renderProductDetail() {
           ${t.video}
         </div>
         <div class="video-wrapper">
-          <iframe id="origin-video" src="${product.videoUrl}&enablejsapi=1" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <video controls playsinline preload="metadata" class="origin-video-player" style="width: 100%; height: 100%; border-radius: var(--radius-md); background: #000;">
+            <source src="${product.videoUrl}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     `;
-
-  // Setup YouTube Iframe API to prevent recommendations at the end
-  setupYouTubePlayer('origin-video');
 
   // Render footer social icons
   const footerSocial = document.getElementById('footer-social');
@@ -624,46 +624,6 @@ function initWindowParallax() {
   handleParallax();
 }
 
-/* ============================================
-   YOUTUBE PLAYER API SETUP
-   ============================================ */
-function setupYouTubePlayer(iframeId) {
-  if (window.YT && window.YT.Player) {
-    initPlayer();
-  } else {
-    // Only load the script if it isn't already there
-    if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-      const tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      if (firstScriptTag) {
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-      } else {
-        document.head.appendChild(tag);
-      }
-    }
-    
-    // Chain callbacks if needed
-    const oldCallback = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = function() {
-      if (oldCallback) oldCallback();
-      initPlayer();
-    };
-  }
 
-  function initPlayer() {
-    new YT.Player(iframeId, {
-      events: {
-        'onStateChange': function(event) {
-          // When video ends (0), go to start and stop playing to prevent recommendations
-          if (event.data === YT.PlayerState.ENDED) {
-            event.target.seekTo(0);
-            event.target.stopVideo();
-          }
-        }
-      }
-    });
-  }
-}
 
 
