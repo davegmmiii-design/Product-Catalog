@@ -29,7 +29,8 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/file/d/1XrCTqDUiPATPfSYFuwoDGRUW9xPYM936/preview",
+    videoUrl: "https://drive.google.com/file/d/1XrCTqDUiPATPfSYFuwoDGRUW9xPYM936/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=15Emr7zOqKeVQl_Hr7Og7J0-F5W2yzoFQ&sz=w800",
     visible: true
   },
   {
@@ -56,7 +57,8 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/file/d/1bp_uosCS6WlWNGXwKZs5y2iLHtKu0y3I/preview",
+    videoUrl: "https://drive.google.com/file/d/1bp_uosCS6WlWNGXwKZs5y2iLHtKu0y3I/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=1D3S_Etig8R3LUdx1GJg_q2UY7N-VDYhB&sz=w800",
     visible: true
   },
   {
@@ -83,7 +85,8 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://drive.google.com/file/d/1aJ_WIzLSQV_1_Lq3givNXkEibrcipIKi/preview",
+    videoUrl: "https://drive.google.com/file/d/1aJ_WIzLSQV_1_Lq3givNXkEibrcipIKi/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=1otrF8G12x9yRz98vZhsCL8CkEN1Sy4ce&sz=w800",
     visible: true
   },
   {
@@ -110,7 +113,8 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/file/d/1rd7-ZNWuXhE_7KrByRaIBNIUCPFkbsHD/preview",
+    videoUrl: "https://drive.google.com/file/d/1rd7-ZNWuXhE_7KrByRaIBNIUCPFkbsHD/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=15Emr7zOqKeVQl_Hr7Og7J0-F5W2yzoFQ&sz=w800",
     visible: true
   },
   {
@@ -137,7 +141,8 @@ const products = [
     stationProcessing: "Washed & Natural",
     stationWater: "Mountain Spring Water",
     stationNotes: "The station works with over 800 smallholder farmers and uses clean spring water with controlled fermentation tanks.",
-    videoUrl: "https://drive.google.com/file/d/1CgIDU0NZVpNC4rPZVHDXn7iqtrtH228q/preview",
+    videoUrl: "https://drive.google.com/file/d/1CgIDU0NZVpNC4rPZVHDXn7iqtrtH228q/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=1D3S_Etig8R3LUdx1GJg_q2UY7N-VDYhB&sz=w800",
     visible: true
   },
   {
@@ -164,7 +169,8 @@ const products = [
     stationProcessing: "Honey & Washed",
     stationWater: "River-fed Channels",
     stationNotes: "Focused on slow drying and traceability, this station emphasizes quality separation and sustainable water usage.",
-    videoUrl: "https://drive.google.com/file/d/1SCA0hQS9eEmCxr8oohmvak6iGeHPeGbm/preview",
+    videoUrl: "https://drive.google.com/file/d/1SCA0hQS9eEmCxr8oohmvak6iGeHPeGbm/view",
+    videoThumb: "https://drive.google.com/thumbnail?id=1otrF8G12x9yRz98vZhsCL8CkEN1Sy4ce&sz=w800",
     visible: true
   }
 ];
@@ -417,7 +423,15 @@ function renderProductDetail() {
           ${t.video}
         </div>
         <div class="video-wrapper">
-          <iframe id="origin-video" src="${product.videoUrl}" title="Origin Video — ${product.name}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; height: 100%; border-radius: var(--radius-md); border: none;"></iframe>
+          <a href="${product.videoUrl}" target="_blank" rel="noopener" class="video-poster" aria-label="Watch origin video">
+            <img src="${product.videoThumb}" alt="Origin video thumbnail" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-md);display:block;">
+            <div class="video-poster__overlay">
+              <div class="video-poster__play">
+                <svg viewBox="0 0 24 24" fill="white" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <span class="video-poster__label">Watch on Drive</span>
+            </div>
+          </a>
         </div>
       </div>
     `;

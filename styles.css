@@ -1044,6 +1044,76 @@ button {
 }
 
 /* ============================================
+   VIDEO POSTER CARD (click-to-open in Drive)
+   ============================================ */
+.video-poster {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.video-poster:hover img {
+  transform: scale(1.04);
+}
+
+.video-poster__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: background 0.3s ease;
+}
+
+.video-poster:hover .video-poster__overlay {
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.video-poster__play {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.video-poster:hover .video-poster__play {
+  transform: scale(1.12);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.video-poster__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ============================================
    SHARED: Footer
    ============================================ */
 .page-footer {
